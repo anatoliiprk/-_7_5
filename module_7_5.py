@@ -7,7 +7,7 @@ directory = '.'
 for root, dirs, files in os.walk(directory):
     for file in files:
         if file == 'module_7_5.py':
-            filepath = os.path.join('.', 'module_7_5.py')
+            filepath = os.path.join('.', file)
             filetime = os.path.getmtime(filepath)
             formatted_time = time.strftime('%d.%m.%Y %H:%M', time.localtime(filetime))
             filesize = os.path.getsize(filepath)
